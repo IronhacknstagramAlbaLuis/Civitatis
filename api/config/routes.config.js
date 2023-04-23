@@ -8,9 +8,13 @@ const likes = require("../controllers/likes.controllers");
 const secure = require("../middlewares/secure.mid");
 const usersMid = require("../middlewares/users.mid");
 const reviewsMid = require("../middlewares/reviews.mid");
+const isAdmin = require(".") //TODO
+
 
 router.get("/activities", activities.list);
+router.post("/activities", secure.auth, isAdmin, activities.create)
 router.get("/activities/:id", activities.detail);
+
 
 router.post("/activities/:id/review",secure.auth, reviews.create);
 router.patch("/activities/:id/review/:reviewId",secure.auth,reviewsMid.exists,reviewsMid.checkAuthor,reviews.update);

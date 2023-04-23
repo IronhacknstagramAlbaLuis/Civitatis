@@ -30,8 +30,7 @@ const userSchema = new Schema(
       required: "Student password is required",
       minlength: [8, "Student password needs at least 8 chars"],
     },
-    
-  
+    role: ["guest", "admin"]
   },
   {
     timestamps: true,
@@ -48,6 +47,7 @@ const userSchema = new Schema(
 )
 userSchema.pre("save", function (next) {
   const user = this;
+  user.admin = proces.env.ADMIN_ADMITED === user.email;
 
   if (user.isModified("password")) {
     bcrypt

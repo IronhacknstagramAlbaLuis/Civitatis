@@ -7,8 +7,10 @@ const createError = require("http-errors");
 //** Load configuration */
 
 require("./config/db.config");
-const app = express();
 
+const app = express();
+const cors = require('./config/cors.config');
+app.use(cors);
 app.use(express.json());
 app.use(logger("dev"));
 

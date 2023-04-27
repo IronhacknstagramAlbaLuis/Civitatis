@@ -17,6 +17,10 @@ const userSchema = new Schema(
       required: "Student email is required",
       match: [/^\S+@\S+\.\S+$/, "Student email must be valid"],
     },
+    confirm: {
+      type:Boolean,
+      default:true
+    },
     username: {
       type: String,
       required: "Username is required",
@@ -30,7 +34,9 @@ const userSchema = new Schema(
       required: "Student password is required",
       minlength: [8, "Student password needs at least 8 chars"],
     },
-    role: ["guest", "admin"]
+    admin: {
+      type: Boolean
+    }
   },
   {
     timestamps: true,
@@ -46,8 +52,10 @@ const userSchema = new Schema(
   }
 )
 userSchema.pre("save", function (next) {
+
   const user = this;
-  user.admin = proces.env.ADMIN_ADMITED === user.email;
+  const admins = process.env.ADMIN_ADMITED
+  user.admin = admins.split("&").includes(user.email);
 
   if (user.isModified("password")) {
     bcrypt
@@ -67,17 +75,23 @@ userSchema.pre("save", function (next) {
 userSchema.methods.checkPassword = function (password) {
   return bcrypt.compare(password, this.password);
 };
+userSchema.virtual("activities", {
+  ref: "Activity",
+  localField: "_id",
+  foreignField: "user", // TODO
+  justOne: false,
+});
 
 userSchema.virtual("likes", {
-  ref: "Likes",
+  ref: "Like",
   localField: "_id",
-  foreignField: "activity", // TODO
+  foreignField: "user", // TODO
   justOne: false,
 });
 userSchema.virtual("reviews", {
-  ref: "Reviews",
+  ref: "Review",
   localField: "_id",
-  foreignField: "activity", // TODO
+  foreignField: "author", // TODO
   justOne: false,
 });
 

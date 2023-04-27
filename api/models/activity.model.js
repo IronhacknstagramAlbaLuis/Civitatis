@@ -20,6 +20,11 @@ const activitySchema = new Schema(
     },
     pics: {
       type: String,
+    },
+    user:{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: "User is required",
     }
   },
   {

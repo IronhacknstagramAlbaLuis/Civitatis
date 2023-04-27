@@ -5,14 +5,16 @@ const jwt = require("jsonwebtoken");
 
 const userConfirmationRequired = process.env.USER_CONFIRMATION_REQUIRED === "true";
 
-module.exports.list = (req, res, next) => {
-  User.find() // TODO: filters
-    .then((users) => res.json(users))
-    .catch(next);
-};
+// module.exports.list = (req, res, next) => {
+//   User.find() // TODO: filters
+//     .then((users) => res.json(users))
+//     .catch(next);
+// };
 
 module.exports.create = (req, res, next) => {
+
   User.create(req.body)
+
     .then((user) => {
       if (userConfirmationRequired) {
         mailer.sendConfirmationEmail(user);
@@ -22,12 +24,15 @@ module.exports.create = (req, res, next) => {
     .catch(next);
 };
 
-module.exports.detail = (req, res, next) => res.json(req.user);
+
+module.exports.detail = (req, res, next) =>{ 
+  User.findById(req.params.id)
+  .then((user) => { res.status(200).json(user)})
+}
+  
+
 
 module.exports.delete = (req, res, next) => {
-  if (req.user.id !== req.params.id) {
-    return next(createError(403, "Forbidden"));
-  }
 
   User.deleteOne({ _id: req.user.id })
     .then(() => res.status(204).send())
@@ -45,6 +50,11 @@ module.exports.update = (req, res, next) => {
     .save()
     .then((user) => res.json(user))
     .catch(next);
+// User.findByIdAndUpdate(req.params.id, req.body, {new: true, runValidators: true}) 
+// .then((user) => res.status(200).json(user))
+// .catch(next)
+
+
 };
 
 module.exports.confirm = (req, res, next) => {
@@ -62,7 +72,6 @@ module.exports.login = (req, res, next) => {
       if (!user) {
         return next(createError(401, { errors: { password: 'Invalid credentials' }}));
       }
-
       if (!user.confirm) {
         return next(createError(401, { errors: { username: 'Please confirm your account' } }));
       }

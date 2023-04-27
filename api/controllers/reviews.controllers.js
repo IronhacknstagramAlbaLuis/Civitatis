@@ -2,19 +2,17 @@ const Review = require("../models/review.model.js");
 
 module.exports.create = (req, res, next) => {
   Review.create({
-    text: req.body.text,
-    review: req.params.id,
-    author: req.user.id,
+     activity: req.body.activity,
+     author: req.user.id,
+     review: req.body.review
   })
-    .populate("activity")
-    .populate("author")
     .then((review) => res.json(review))
     .catch(next);
 };
 
+
 module.exports.update = (req, res, next) => {
   Object.assign(req.review, req.body);
-
   req.review
     .save()
     .then((review) => res.json(review))

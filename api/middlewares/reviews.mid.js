@@ -4,7 +4,7 @@ const createError = require("http-errors");
 module.exports.exists = (req, res, next) => {
   const reviewId = req.params.reviewId || req.params.id;
 
-  Review.findById(reviewId)
+  Reviews.findById(reviewId)
     .then((review) => {
       if (review) {
         req.review = review;

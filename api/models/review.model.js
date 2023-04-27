@@ -3,18 +3,18 @@ const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema(
   {
-    text: {
+    review: {
       type: String,
       required: "Review text is required",
     },
     activity: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "activity",
+      ref: "Activity",
       required: "Review project is required",
     },
     author: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "user",
+      ref: "User",
       required: "Review author is required",
     },
   },

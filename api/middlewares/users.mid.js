@@ -5,7 +5,7 @@ module.exports.exists = (req, res, next) => {
   const userId = req.params.userId || req.params.id;
   if (userId === 'me') {
     if (req.user) {
-      req.student = req.user;
+      // req.student = req.user;
       next();
     } else {
       next(createError(401, "Missing access token"));

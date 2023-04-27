@@ -25,7 +25,7 @@ module.exports.auth = (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-
+    console.log(decoded.sub)
     User.findById(decoded.sub)
       .then((user) => {
         if (user) {
@@ -40,3 +40,19 @@ module.exports.auth = (req, res, next) => {
     next(createError(401, err));
   }
 };
+
+module.exports.isAdmin = (req, res, next) => {
+    if (req.user?.admin) {
+      next()
+    } else {
+      next(createError(403, 'Forbidden'))
+    }
+  }
+  module.exports.isOwner = (req, res, next) => {
+    if (req.user.id === req.params.id) {
+      next()
+    } else {
+      next(createError(403, 'Forbidden'))
+    }
+  }
+

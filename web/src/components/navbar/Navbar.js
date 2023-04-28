@@ -1,40 +1,33 @@
 import React from 'react'
+import { NavLink, Link } from 'react-router-dom'
+import logo from'../../assets/img/logo_civitatis.png'
+import searchicon from'../../assets/img/searchicon.png'
+import usericon from'../../assets/img/usericon.png'
+
+import './navBar.css';
 
 function Navbar() {
-
   
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary menu">
     <div className="container-fluid">
-    <a className="navbar-brand" href="#">Navbar</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
+    <Link to="#" className="navbar-brand"><img src={logo} className='logo' alt="civitatis"/></Link>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Link</a>
-        </li>
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
+      <ul className="navbar-nav me-auto  mb-2 mb-lg-0">
+      <li className="nav-item dropdown">
+          <Link to="#"  className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src={usericon} className='usericon' alt="My account"/>
+          </Link>
           <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
+            <li><Link to="#" className="dropdown-item" >Action</Link></li>
+            <li><Link to="#" className="dropdown-item">Another action</Link></li>
+            <li><Link to="#" className="dropdown-item">Log out</Link></li>
           </ul>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link disabled">Disabled</a>
         </li>
       </ul>
       <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <input className="form-control me-2 search" type="search" placeholder="Where are you traveling to?" aria-label="Search"/>
+        <button className="btn btn-outline-success enter" type="submit"><img src={searchicon} className='searchicon' alt="Go!"/></button>
       </form>
     </div>
   </div>

@@ -1,0 +1,34 @@
+
+.navbar {
+  background: #f70759 !important;
+}
+.menu .container-fluid {
+  max-width: 1200px;
+}
+img.logo {
+  width: 101px;
+}
+.search{
+  border-radius: 19px;
+  border: none;
+  width: 290px;
+}
+button.btn.btn-outline-success {
+  border: none;
+}
+img.searchicon {
+  width: 22px;
+}
+.enter{
+    position: relative;
+    right: 68px;
+}
+img.usericon {
+  width: 22px;
+}
+.nav-link::after {
+  display: none !important;
+}
+input.form-control.me-2.search {
+  font-size: 14px;
+}

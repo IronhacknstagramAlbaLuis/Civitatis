@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/img/logo_civitatis.png'
-import searchicon from '../../assets/img/searchicon.png'
-import usericon from '../../assets/img/usericon.png'
 
 import './footer.css';
 

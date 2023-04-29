@@ -54,5 +54,5 @@ app.use((error, req, res, next) => {
   res.status(error.status).json(data);
 });
 
-const port = process.env.PORT || 3002;
+const port = process.env.PORT || 3001;
 app.listen(port, () => console.info(`Application is running at port ${port}`));

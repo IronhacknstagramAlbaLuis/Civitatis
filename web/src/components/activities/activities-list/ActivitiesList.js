@@ -8,13 +8,19 @@ function ActivitiesList() {
     activitiesService.list()
     .then((activities) => setActivities(activities))
     .catch(error => console.error(error))
-  }, [])
+  }, [activities])
 
   return (
     <>
-      <h1>Civitatis</h1>
       {activities.map((activities) => 
-        <div key={activities.id}>{activities.id}</div>)}
+        <div key={activities.id}>
+          <p>{activities.nameactivity}</p>
+          <p> {activities.description}</p>
+          <p>{activities.price}</p>
+          <p>{activities.details}</p>
+          <img src={activities.pics} alt="Coliseo Roma" />
+       </div>)}
+       
     </>
   )
 }

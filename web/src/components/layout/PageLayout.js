@@ -2,10 +2,10 @@ import React from 'react'
 
 import './PageLayout.css';
 
-function PageLayout({ title, children }) {
+function PageLayout({ children }) {
   return (
     <div className='page-layout'>
-      
+      {children}
     </div>
   )
 }

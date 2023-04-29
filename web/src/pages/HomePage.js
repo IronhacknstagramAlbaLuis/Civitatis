@@ -3,31 +3,31 @@ import PageLayout from '../components/layout/PageLayout';
 
 function Home () {
   return (
-    <PageLayout title="Home">
+    <PageLayout>
       <section className="principalbaner">
-
-   		  <div class="box search">
+   		  <div className="box search">
 			    <h4>Llena tu viaje</h4>
          	<h3>Excursiones en español<br/> por todo el mundo</h3>
+
 		    </div>
 
-   		  <div class="box tips">
-			    <div class="tip">
+   		  <div className="box tips">
+			    <div className="tip">
 				    <p>Las mejores actividades</p>
 			    </div>
 
-			    <div class="tip">
+			    <div className="tip">
 				    <p>Atención al cliente 24/7</p>
 			    </div>
 
-			    <div class="tip">
+			    <div className="tip">
 				    <p>Miles de opiniones</p>
 			    </div>
 
-			    <div class="tip">
+			    <div className="tip">
 				    <p>Precios finales</p>
 			    </div>
-          
+
 		    </div>
       </section>
     </PageLayout>

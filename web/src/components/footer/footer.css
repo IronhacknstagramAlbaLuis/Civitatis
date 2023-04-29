@@ -14,6 +14,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  margin-top: 15%;
 }
 body {
 	padding: 0px;
@@ -27,23 +28,23 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 .logofooter {
-  position: absolute;
-  bottom: 30%;
-  right: 5%;
-  z-index: 999;
-  width: 132px;
+      position: absolute;
+    bottom: 30%;
+    right: 5%;
+    z-index: 999;
+    width: 132px;
 }
 
 body .footer {
   z-index: 1;
   --footer-background:#f70759;
   display: grid;
-  position: absolute;
+  position: relative;
   grid-area: footer;
   min-height: 12rem;
 }
 body .footer .bubbles {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;

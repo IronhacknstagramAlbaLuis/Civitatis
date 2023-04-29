@@ -25,10 +25,6 @@ function Navbar() {
           </ul>
         </li>
       </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2 search" type="search" placeholder="Where are you traveling to?" aria-label="Search"/>
-        <button className="btn btn-outline-success enter" type="submit"><img src={searchicon} className='searchicon' alt="Go!"/></button>
-      </form>
     </div>
   </div>
   </nav>

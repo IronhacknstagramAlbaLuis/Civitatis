@@ -1,0 +1,144 @@
+.principalbaner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+}
+
+.box:nth-child(1) {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.fbox:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+		
+.tips {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: normal;
+}
+
+.tip {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  margin: 0px 25px;
+}		
+.search{
+	margin: 10% 0%;
+  min-width: 50%;
+}	
+h1 {
+  font-size: 3em;
+  font-weight: lighter;
+	margin: 0px;
+  margin-bottom: 4%;
+  font-family: 'Montserrat', sans-serif;
+}
+h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 40px;
+}
+h3 {
+  font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin: 0px;
+  font-family: 'Montserrat', sans-serif;
+}
+.principalbaner {
+  background-image: url(./../../public/assets/img/bannerhome_2.png);
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-position: top;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	color:white;
+}
+input.form-control.me-2.searchform {
+  border-radius: 33px;
+  border: none;
+  padding: 3% 9% 3% 4%;
+}
+section.principalsdestinies {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 5% 0px;
+}
+.destinos{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  justify-content:space-between;
+  align-items:center;
+  align-content:center;
+  height:250px;
+  margin: 20px 0px;
+}
+.destino{
+  order:0;
+  flex:0 1 auto;
+  align-self:auto;
+  height: 100%;
+  width: 30%;
+}
+.destino p {
+  text-align: center;
+  padding: 25% 0;
+  font-size: 22px;
+  color: white;
+  font-weight: 700;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.9);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.roma{
+  background-image: url(./../../public/assets/img/civitatis_roma.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.ny{
+  background-image: url(./../../public/assets/img/civitatis_ny.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.bali{
+  background-image: url(./../../public/assets/img/civitatis_bali.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.paris{
+  background-image: url(./../../public/assets/img/civitatis_paris.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.elcairo{
+  background-image: url(./../../public/assets/img/civitatis_elcairo.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.londres{
+  background-image: url(./../../public/assets/img/civitatis_londres.jpg);
+  background-position: center;
+  background-size: cover;
+}

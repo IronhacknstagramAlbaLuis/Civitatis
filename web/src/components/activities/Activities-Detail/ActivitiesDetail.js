@@ -1,15 +1,25 @@
-import React from 'react';
 
-function ActivityDetail({ activity  }) {
+import React, { useEffect, useState } from 'react';
+import PageLayout from '../components/layout/PageLayout';
+import ActivityItem from '../Activity-item/.ActivityItem';
+import activitiesService from '../services/activities';
+
+function ActivitiesDetail() {
+
+  const { id } = useParams();
+  const [activity, setActivity] = useState(null);
+
+  useEffect(() => {
+    activitiesService.detail(id)
+      .then(activity => setActivity(activity))
+      .catch(error => console.error(error))
+  }, [id]);
 
   return (
-    <div>
-      <h2>{activity.nameactivity}</h2>
-      <p>{activity.description}</p>
-      <p>{activity.price}</p>
-      <p>{activity.details}</p>
-      <img src={activity.pics} alt={activity.nameactivity} />
-    </div>
-  );
+    <PageLayout>
+     {activity ? <ActivityItem activity={activity} /> : <p>Loading activity...</p>}
+    </PageLayout>
+  )
 }
-export default ActivityDetail
+
+export default ActivitiesDetail;

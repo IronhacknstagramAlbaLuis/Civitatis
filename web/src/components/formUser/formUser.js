@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { useForm } from "react-hook-form";
-import studentsService from '../../services/users'
+import studentsService from '../../services/user'
 
 
 function RegisterForm() {

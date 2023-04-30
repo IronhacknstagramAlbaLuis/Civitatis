@@ -4,6 +4,8 @@ import logo from'../../assets/img/logo_civitatis.png'
 import searchicon from'../../assets/img/searchicon.png'
 import usericon from'../../assets/img/usericon.png'
 
+// const renderNavLinkClassName = ({ isActive} )=> isActive ? 'nav-linl active' : 'nav-link'
+
 import './navBar.css';
 
 function Navbar() {

@@ -1,28 +1,31 @@
-import React, { useEffect, useState } from 'react'
-import activitiesService from '../../../services/activities'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import activitiesService from '../../../services/activities';
 
 function ActivitiesList() {
-  const [activities, setActivities] = useState([])
+  const [activities, setActivities] = useState([]);
 
   useEffect(()=> {
     activitiesService.list()
     .then((activities) => setActivities(activities))
     .catch(error => console.error(error))
-  }, [activities])
+  }, [activities]);
 
   return (
     <>
-      {activities.map((activities) => 
-        <div key={activities.id}>
-          <p>{activities.nameactivity}</p>
-          <p> {activities.description}</p>
-          <p>{activities.price}</p>
-          <p>{activities.details}</p>
-          <img src={activities.pics} alt="Coliseo Roma" />
-       </div>)}
-       
+      {activities.map((activity) => 
+        
+          <div key={activity.id} >
+            <p><Link  to={`/activities/${activity.id}`}>{activity.nameactivity}</Link></p>
+            <p>{activity.description}</p>
+            <p>{activity.price}</p>
+            <p>{activity.details}</p>
+            <img src={activity.pics} alt="Coliseo Roma" />
+         </div>
+        
+      )}
     </>
-  )
+  );
 }
 
-export default ActivitiesList
+export default ActivitiesList;

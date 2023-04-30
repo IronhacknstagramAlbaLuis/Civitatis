@@ -6,6 +6,7 @@ import ActivitiesList from "./components/activities/activities-list/ActivitiesLi
 
 import HomePage from "./pages/HomePage";
 import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/activities/:id " element={<ActivitiesPage/>} /> */}
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage/>} />
 
       </Routes>
      

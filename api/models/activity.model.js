@@ -26,8 +26,7 @@ const activitySchema = new Schema(
         validator: isValidUrl,
         message: "Not a valid url",
       },
-      //default: 'https://res.cloudinary.com/dd06mgqvn/image/upload/v1681490358/iron-projects/iron-projecs-image.png'
-    
+ 
     },
     user:{
       type: mongoose.Schema.Types.ObjectId,

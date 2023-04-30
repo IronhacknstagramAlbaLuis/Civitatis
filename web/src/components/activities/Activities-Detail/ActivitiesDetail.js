@@ -1,7 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
 import PageLayout from '../components/layout/PageLayout';
-import ActivityItem from '../Activity-item/.ActivityItem';
+import ActivityDetail from '../components/activities/Activities-Detail/ActivitiesDetail';
+import { useParams } from  'react-router-dom';
 import activitiesService from '../services/activities';
 
 function ActivitiesDetail() {
@@ -17,7 +18,7 @@ function ActivitiesDetail() {
 
   return (
     <PageLayout>
-     {activity ? <ActivityItem activity={activity} /> : <p>Loading activity...</p>}
+     {activity ? <ActivityDetail activity={activity} /> : <p>Loading activity...</p>}
     </PageLayout>
   )
 }

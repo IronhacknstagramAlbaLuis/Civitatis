@@ -1,25 +1,35 @@
 
 import React, { useEffect, useState } from 'react';
-import PageLayout from '../components/layout/PageLayout';
-import ActivityDetail from '../components/activities/Activities-Detail/ActivitiesDetail';
 import { useParams } from  'react-router-dom';
-import activitiesService from '../services/activities';
+import activitiesService from '../../../services/activities'
 
 function ActivitiesDetail() {
 
   const { id } = useParams();
-  const [activity, setActivity] = useState(null);
+  const [activity, setActivity] = useState( );
 
   useEffect(() => {
-    activitiesService.detail(id)
-      .then(activity => setActivity(activity))
-      .catch(error => console.error(error))
+    async function fetchActivity() {
+      try {
+        const activity = await activitiesService.detail(id)
+        setActivity(activity)
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchActivity()
   }, [id]);
 
   return (
-    <PageLayout>
-     {activity ? <ActivityDetail activity={activity} /> : <p>Loading activity...</p>}
-    </PageLayout>
+    <>
+       { !activity ? (<p>Loading activity...</p>) :(
+        <>
+        <h1>{activity}</h1>
+        </>
+       )}
+    </>
+    
+    
   )
 }
 

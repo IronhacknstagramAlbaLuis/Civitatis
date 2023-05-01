@@ -5,13 +5,13 @@ import loginService from '../../services/user'
 import { AuthContext } from '../context/AuthStore';
 
 function LoginForm() {
-  const { register, handleSubmit, setError, formState: { errors } } = useForm({ mode: 'onBlur', });
-  const {serverError, setServerError } = useState(undefined)
+  const { register, handleSubmit, setError, formState: { errors } } = useForm({ mode: 'onBlur'});
+  const {serverError, setServerError } = useState()
   const { onUserChange } = useContext(AuthContext)
   const navigate = useNavigate( )
 
   const onLoginSubmit = (user) => {
-    // setServerError()
+    //setServerError()
     loginService.login(user)
     .then((user) => {
       onUserChange(user)
@@ -52,9 +52,9 @@ function LoginForm() {
         <input
           type="password"
           id="password"
-          {...register("password", { required: true})}
+          {...register("password", { required: true, minLength: 8 })}
         />
-        {errors.password && <span>This field is required and needs at least 8 chars</span>}
+        {errors.password && <span>This password is invalid</span>}
       </div>
 
       <button type="submit">Login</button>

@@ -1,15 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+import activities from '../../../services/activities';
 
-function ActivityItem({ activity  }) {
+function ActivityItem({ activity: {id , nameactivity, pics}  }) {
 
   return (
     <div>
-      <h2>{activity.nameactivity}</h2>
-      <p>{activity.description}</p>
-      <p>{activity.price}</p>
-      <p>{activity.details}</p>
-      <img src={activity.pics} alt={activity.nameactivity} />
+      <h2><Link to={`/activities/${id}`}>{nameactivity}</Link></h2>
+      <img src={pics} className='card-img' alt={nameactivity} />
     </div>
   );
 }
 export default ActivityItem
+

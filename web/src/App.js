@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import  AuthStore  from './components/context/AuthStore'
+import DetailPage from './pages/DetailPage';
 
 
 
@@ -21,7 +22,10 @@ function App() {
           {/* <Route path="/activities/:id " element={<ActivitiesPage/>} /> */}
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage/>} />
+          <Route path="/activities/:id" element={<DetailPage/>} />
+
           </Routes> 
+          {/* <Route path="/projects/:projectId" element={<ProjectPage />} /> */}
         
         <Footer />
       </AuthStore>

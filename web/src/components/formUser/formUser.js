@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import { useForm } from "react-hook-form";
-import studentsService from '../../services/user'
+import userService from '../../services/user'
 
 
 function RegisterForm() {
   const { register, handleSubmit, setError, formState: { errors } } = useForm({mode: 'onBlur'});
   const onSubmit = (user) => {
-    studentsService.create(user)
+    userService.create(user)
     .then(user => console.info(user))
     .catch(error => error.response?.data?.errors || {});
     Object.keys(errors)

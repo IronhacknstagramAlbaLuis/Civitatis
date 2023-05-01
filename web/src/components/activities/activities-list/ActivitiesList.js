@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import activitiesService from '../../../services/activities';
+import ActivityItem from '../Activity-item/.ActivityItem';
 
 function ActivitiesList() {
   const [activities, setActivities] = useState([]);
@@ -9,21 +10,19 @@ function ActivitiesList() {
     activitiesService.list()
     .then((activities) => setActivities(activities))
     .catch(error => console.error(error))
-  }, [activities]);
+  }, []);
 
   return (
     <>
-      {activities.map((activity) => 
+      <div className='row g-2'>
+        {activities.map((activity)=>(
+          <div className='d-flex align-items-stretch' key={activity.id}>
+            <ActivityItem activity ={activity}/>
+        </div>
+      ))}
+
+      </div>
         
-          <div key={activity.id} >
-            <p><Link  to={`/activities/${activity.id}`}>{activity.nameactivity}</Link></p>
-            <p>{activity.description}</p>
-            <p>{activity.price}</p>
-            <p>{activity.details}</p>
-            <img src={activity.pics} alt="Coliseo Roma" />
-         </div>
-        
-      )}
     </>
   );
 }

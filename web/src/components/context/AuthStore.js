@@ -7,7 +7,8 @@ function AuthStore({ children }) {
   const [user, setUser] = useState()
 
   const handleUserChange = (user) => {
-    console.log(user)
+    console.log('updating user context', user)
+    setUser(user)
      }
   return (
      <AuthContext.Provider value={{user, onUserChange: handleUserChange}}>

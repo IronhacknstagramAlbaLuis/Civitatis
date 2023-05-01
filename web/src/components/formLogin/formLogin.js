@@ -1,15 +1,18 @@
-import React, { useState }  from 'react'
+import React, { useState, useContext }  from 'react'
 import { useForm } from 'react-hook-form'
 import loginService from '../../services/user'
+import { AuthContext } from '../context/AuthStore';
 
 function LoginForm() {
   const { register, handleSubmit, setError, formState: { errors } } = useForm({ mode: 'onBlur', });
-  const {serverError, setServerError }= useState(undefined)
+  const {serverError, setServerError } = useState(undefined)
+  const { onUserChange } = useContext(AuthContext)
 
   const onLoginSubmit = (user) => {
     // setServerError()
     loginService.login(user)
     .then((user) => {
+      onUserChange(user)
       console.log(user)})
     .catch(error => {
       const errors = error.response?.data?.errors;

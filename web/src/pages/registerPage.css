@@ -1,0 +1,6 @@
+.col-2.plane1, .col-10.plane2 {
+  float: left;
+}
+img.planeimage {
+  max-width: 75%;
+}

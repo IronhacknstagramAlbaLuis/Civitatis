@@ -32,3 +32,6 @@ img.usericon {
 input.form-control.me-2.search {
   font-size: 14px;
 }
+.navbar-collapse {
+  flex-grow: 0;
+}

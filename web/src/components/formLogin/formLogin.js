@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import loginService from '../../services/user'
 import { AuthContext } from '../context/AuthStore';
+import logimage from '../../../src/assets/img/civi_reg.png';
+
+import './formLogin.css';
 
 function LoginForm() {
   const { register, handleSubmit, setError, formState: { errors } } = useForm({ mode: 'onBlur'});
@@ -31,34 +34,39 @@ function LoginForm() {
 
 
    return (
-    
-    <form onSubmit={handleSubmit(onLoginSubmit)}>
-    
+      <div className="row">
+        
+        <div className="col-6">
+          <img src={logimage} alt="Login" className='loginimage'/>
+        </div>
 
-      <div>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          id="username"
-          {...register("username", {
-            required: true,
-          })}
-        />
-        {errors.username && <span>This field is required, needs at least 3 chars, must be lowercase and without spaces</span>}
+        <div className="col-6 formulary">
+          <form onSubmit={handleSubmit(onLoginSubmit)}>
+            <div>
+              <input
+                type="text"
+                placeholder='User Name'
+                id="username"
+                {...register("username", {
+                  required: true,
+                })}
+                />
+            {errors.username && <span>This field is required, needs at least 3 chars, must be lowercase and without spaces</span>}
+            </div>
+            <div>
+              <input
+                type="password"
+                placeholder='Password'
+                id="password"
+                {...register("password", { required: true, minLength: 8 })}
+              />
+              {errors.password && <span>This password is invalid</span>}
+            </div>
+        
+            <button type="submit">Login</button>
+          </form>
+        </div>
       </div>
-
-      <div>
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          {...register("password", { required: true, minLength: 8 })}
-        />
-        {errors.password && <span>This password is invalid</span>}
-      </div>
-
-      <button type="submit">Login</button>
-    </form>
 );
 }
     

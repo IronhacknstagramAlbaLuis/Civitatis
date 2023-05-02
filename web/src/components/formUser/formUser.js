@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { useForm } from "react-hook-form";
 import userService from '../../services/user'
 
+import './formUser.css';
 
 function RegisterForm() {
   const { register, handleSubmit, setError, formState: { errors } } = useForm({mode: 'onBlur'});
@@ -17,30 +18,30 @@ function RegisterForm() {
     
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
-          <label htmlFor="name">Name:</label>
           <input
             type="text"
             id="name"
+            placeholder="Name"
             {...register("name", { required: true, minLength: 3 })}
           />
           {errors.name && <span>This field is required and needs at least 3 chars</span>}
         </div>
 
         <div>
-          <label htmlFor="email">Email:</label>
           <input
             type="email"
             id="email"
+            placeholder="Email"
             {...register("email", { required: true, pattern: /^\S+@\S+\.\S+$/ })}
           />
           {errors.email &&<span>This field is required and must be a valid email address</span>}
         </div>
 
         <div>
-          <label htmlFor="username">Username:</label>
           <input
             type="text"
             id="username"
+            placeholder="User"
             {...register("username", {
               required: true,
               minLength: 3,
@@ -51,10 +52,10 @@ function RegisterForm() {
         </div>
 
         <div>
-          <label htmlFor="password">Password:</label>
           <input
             type="password"
             id="password"
+            placeholder="Password"
             {...register("password", { required: true, minLength: 8 })}
           />
           {errors.password && <span>This field is required and needs at least 8 chars</span>}

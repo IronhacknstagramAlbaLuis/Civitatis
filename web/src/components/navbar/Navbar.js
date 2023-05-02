@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { NavLink, Link, useNavigate } from 'react-router-dom'
 import logo from'../../assets/img/logo_civitatis.png'
-import searchicon from'../../assets/img/searchicon.png'
 import usericon from'../../assets/img/usericon.png'
 import { AuthContext } from '../context/AuthStore'
 
@@ -23,16 +22,16 @@ function Navbar() {
           </NavLink>
           <ul className="navbar-nav">
             {(user?.email)?(
-              <>
+              <ul className="dropdown-menu">
               <li className="dropdown-item"><NavLink to = {`/users/${user.id}`} className={renderNavLinkClassName}>{user.email}</NavLink></li>
               <li className="dropdown-item"><button className ='nav-link' onClick={()=> logout()} >Logout</button></li>
               
-              </>
+              </ul>
             ) : (
-              <>
+              <ul className="dropdown-menu">
                 <li className="dropdown-item"> <NavLink to = "/register" className={renderNavLinkClassName}>Register</NavLink></li>
                 <li className="dropdown-item"> <NavLink to = "/login" className={renderNavLinkClassName}>Login</NavLink></li>
-              </>
+              </ul>
             )}
             <li><NavLink to="#" className="dropdown-item" >Action</NavLink></li>
             <li><NavLink to="#" className="dropdown-item">Another action</NavLink></li>

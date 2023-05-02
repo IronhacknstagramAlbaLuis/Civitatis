@@ -26,7 +26,6 @@ function App() {
           <Route path="/users/:userId" element={<UserPage/>} />
         </Routes> 
       
-        
         <Footer />
       </AuthStore>
     </>

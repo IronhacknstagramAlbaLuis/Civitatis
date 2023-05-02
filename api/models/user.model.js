@@ -78,7 +78,7 @@ userSchema.methods.checkPassword = function (password) {
 userSchema.virtual("activities", {
   ref: "Activity",
   localField: "_id",
-  foreignField: "user", // TODO
+  foreignField: "user", 
   justOne: false,
 });
 

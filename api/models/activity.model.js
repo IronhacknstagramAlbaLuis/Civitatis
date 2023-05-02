@@ -50,13 +50,13 @@ const activitySchema = new Schema(
 activitySchema .virtual("reviews", {
   ref: "Review",
   localField: "_id",
-  foreignField: "author", // TODO
+  foreignField: "author", 
   justOne: false,
 });
 activitySchema .virtual("like", {
   ref: "Like",
   localField: "_id",
-  foreignField: "activity", // TODO
+  foreignField: "activity", 
   justOne: false,
 });
 

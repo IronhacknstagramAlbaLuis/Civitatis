@@ -13,17 +13,21 @@ module.exports.create = (req, res, next) => {
     destiny,
     description,
     details,
-    pics
+    pics,
+    price
 } = req.body
 
-const body = { nameactivity, destiny, description, details,pics, user: req.user.id }
+const body = { nameactivity, destiny, description, details,pics, price, user: req.user.id }
   
   Activity.create(body)
     .then((activity) => res.status(201).json(activity))
     .catch(next);
  };
 
-module.exports.detail = (req, res, next) => res.json(req.params.id)
+module.exports.detail = (req, res, next) => 
+Activity.findById(req.params.id)
+.then((activity) => res.status(200).json(activity))
+
 
 module.exports.delete = (req, res, next) => {
   Activity.deleteOne({

@@ -1,6 +1,11 @@
-.col-2.plane1, .col-10.plane2 {
-  float: left;
-}
 img.planeimage {
   max-width: 75%;
+}
+.registrado {
+  padding-top: 70px;
+}
+.registrado a {
+  color: #F70759;
+  text-decoration: none;
+  font-weight: 600;
 }

@@ -29,6 +29,16 @@ function RegisterForm() {
 
         <div>
           <input
+            type="text"
+            id="lastname"
+            placeholder="Last Name"
+            {...register("lastname", { required: true, minLength: 3 })}
+          />
+          {errors.name && <span>This field is required and needs at least 3 chars</span>}
+        </div>
+
+        <div>
+          <input
             type="email"
             id="email"
             placeholder="Email"
@@ -62,12 +72,13 @@ function RegisterForm() {
         </div>
 
         <div>
-          <label htmlFor="confirm">Confirm:</label>
+          
           <input
             type="checkbox"
             id="confirm"
             {...register("confirm")}
           />
+          <label htmlFor="confirm">Confirm:</label>
         </div>
 
         <button type="submit">Submit</button>

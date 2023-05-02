@@ -1,4 +1,4 @@
-input#email, input#name {
+input#email, input#name, input#lastname {
   width: 100%;
   border: none;
   border-bottom: 2px solid #f70759;
@@ -7,4 +7,17 @@ input#email, input#name {
 }
 .container {
   padding: 0px;
+}
+img.planeimage {
+  max-width: 60%;
+  margin-bottom: 5%;
+}
+.registrado a {
+  color: #f70759;
+  text-decoration: none;
+  font-weight: 600;
+}
+input#confirm {
+  border: #f70759;
+  margin-right: 17px;
 }

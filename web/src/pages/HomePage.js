@@ -16,7 +16,7 @@ function Home () {
 			    <h3>Llena tu viaje</h3>
          	<h1>Excursiones en español por todo el mundo</h1>
            <form className="d-flex" role="search">
-             
+             <Destiny/>
            </form>
 		    </div>
 
@@ -43,7 +43,7 @@ function Home () {
         <h2>Principales destinos</h2>
         <div className="destinos">
        
-        {/* <div className="destino roma">
+        <div className="destino roma">
               <p>Roma</p>
           </div>
           <div className="destino bali">
@@ -63,7 +63,7 @@ function Home () {
           </div>
           <div className="destino londres">
               <p>Londres</p>
-          </div> */}
+          </div>
         </div>
       </section>
 

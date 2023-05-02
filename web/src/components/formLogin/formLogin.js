@@ -36,11 +36,11 @@ function LoginForm() {
    return (
       <div className="row">
         
-        <div className="col-6">
+        <div className="col">
           <img src={logimage} alt="Login" className='loginimage'/>
         </div>
 
-        <div className="col-6 formulary">
+        <div className="col formulary">
           <form onSubmit={handleSubmit(onLoginSubmit)}>
             <div>
               <input

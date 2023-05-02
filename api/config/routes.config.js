@@ -15,7 +15,7 @@ router.post("/login", users.login);
 
 //endpoints for user
 router.post("/users", users.create);
-router.get("/users/:id", usersMid.exists, users.detail);
+router.get("/users/:id",  secure.auth, usersMid.exists, users.detail);
 router.patch("/users/:id", secure.auth,  users.update);
 router.delete("/users/:id", secure.auth, secure.isOwner, users.delete);
 router.get("/users/:id/confirm", usersMid.exists, users.confirm);

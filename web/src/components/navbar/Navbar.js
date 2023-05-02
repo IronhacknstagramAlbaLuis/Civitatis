@@ -21,10 +21,10 @@ function Navbar() {
           <NavLink to="/login"  className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <img src={usericon} className='usericon' alt="My account"/>
           </NavLink>
-          <ul className="dropdown-menu">
+          <ul className="navbar-nav">
             {(user?.email)?(
               <>
-              <li className="dropdown-item"><NavLink to = "/" className={renderNavLinkClassName}>{user.email}</NavLink></li>
+              <li className="dropdown-item"><NavLink to = {`/users/${user.id}`} className={renderNavLinkClassName}>{user.email}</NavLink></li>
               <li className="dropdown-item"><button className ='nav-link' onClick={()=> logout()} >Logout</button></li>
               
               </>

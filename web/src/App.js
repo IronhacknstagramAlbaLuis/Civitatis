@@ -8,6 +8,7 @@ import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import  AuthStore  from './components/context/AuthStore'
 import DetailPage from './pages/DetailPage';
+import UserPage from './pages/UserPage';
 
 
 
@@ -19,13 +20,12 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/activities/:id " element={<ActivitiesPage/>} /> */}
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage/>} />
           <Route path="/activities/:id" element={<DetailPage/>} />
-
-          </Routes> 
-          {/* <Route path="/projects/:projectId" element={<ProjectPage />} /> */}
+          <Route path="/users/:userId" element={<UserPage/>} />
+        </Routes> 
+      
         
         <Footer />
       </AuthStore>

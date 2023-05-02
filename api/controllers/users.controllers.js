@@ -81,7 +81,7 @@ module.exports.login = (req, res, next) => {
           return next(createError(401, { errors: { password: 'Invalid credentials' } }));
         }
         const token = jwt.sign(
-          { sub: user.id, exp: Date.now() / 1000 + 3_600 },
+          { sub: user.id, exp: Date.now() / 1000 + 3_600 }, //1 h duration
           process.env.JWT_SECRET
         );
 

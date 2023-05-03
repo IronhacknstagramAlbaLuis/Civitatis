@@ -5,7 +5,6 @@ import Destiny from '../components/destinyTop/Destiny'
 import ActivitiesList from '../components/activities/activities-list/ActivitiesList';
 
 import './homePage.css';
-;
 
 
 function Home () {

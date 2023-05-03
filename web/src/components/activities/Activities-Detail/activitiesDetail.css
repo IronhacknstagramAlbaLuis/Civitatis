@@ -1,0 +1,81 @@
+.totalactivity p {
+  text-align: justify;
+}
+body {
+  background-color: #f5f4f5;
+}
+
+img.activityicon {
+  max-height: 30px;
+  margin: 0px 10px;
+}
+.totalactivity h1 {
+  padding: 0px;
+  margin: 10px 0px;
+}
+.verde{
+  color:#690;
+}
+.gris{
+  color:#333;
+}
+.gris img.activityicon {
+  padding: 2px;
+}
+p.precio {
+  color: #f70759;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 0px;
+}
+a.boton {
+  background-color: #f70759 !important;
+  color: #fff !important;
+  padding: 10px 50px;
+  border-radius: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.alignri{
+  text-align: right;
+}
+p.destinotext {
+  background: #f70759;
+  display: inline;
+  padding: 0.5% 2%;
+  border: 1px solid #f70759;
+  color: white;
+  border-radius: 20px;
+}
+.backclaro {
+  background: white;
+  margin: 1% 1%;
+  padding: 7px;
+  border-radius: 10px;
+}
+.backclaro p {
+  margin-bottom: 0px;
+}
+.rosa {
+  background: #f70759;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+}
+.rosa p {
+  text-align: center;
+}
+.totalactivity h4 {
+    margin: 30px 0px 20px 0px;
+}
+.carrou{
+  width: 100%;
+}
+p.descipciontextdes {
+  text-align: left;
+}
+.descripciondestacada {
+  padding: 3%;
+}

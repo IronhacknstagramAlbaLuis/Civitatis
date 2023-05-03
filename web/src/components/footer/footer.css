@@ -1,11 +1,11 @@
-.content{
+.content .f{
 	position: absolute;
 	bottom: 0px;
 	z-index: 999;
 	left: 5%;
 	color: white;
 }
-	.content a{
+	.content .f a{
 	color: white;
 		text-decoration: none;
 }

@@ -2,7 +2,7 @@ import RegisterForm from "../components/formUser/formUser";
 import PageLayout from '../components/layout/PageLayout';
 import { Link } from 'react-router-dom'
 
-import planeimage from '../../src/assets/img/plane2.jpg';
+import planeimage from '../../src/assets/img/plane2.png';
 import './registerPage.css';
 
 function RegisterPage() {

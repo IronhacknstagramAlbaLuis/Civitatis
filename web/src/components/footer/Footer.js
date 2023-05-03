@@ -29,7 +29,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="bubbles"></div>
-      <div className="content">
+      <div className="content f">
         <div>
           <div>
             <b>Explora</b>

@@ -93,14 +93,15 @@ section.principalsdestinies {
   align-items:center;
   align-content:center;
   height:250px;
-  margin: 20px 0px;
+  margin: 40px 0px;
 }
 .destino{
   order:0;
   flex:0 1 auto;
   align-self:auto;
   height: 100%;
-  width: 30%;
+  width: 30.5%;
+  box-shadow: 0px 7px 11px 0px rgba(179,179,179,1);
 }
 .destino p {
   text-align: center;

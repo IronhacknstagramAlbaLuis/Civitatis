@@ -35,3 +35,18 @@ input.form-control.me-2.search {
 .navbar-collapse {
   flex-grow: 0;
 }
+.dropdown-item:focus, .dropdown-item:hover {
+  color: var(--bs-dropdown-link-hover-color);
+  background-color: #f70759 !important;
+  color: white;
+}
+.dropdown-item {
+  color: #565656;
+  border-radius: none;
+}
+@media (min-width: 992px){
+.dropdown-menu {
+    position: absolute;
+    left: -95px !important;
+}
+}

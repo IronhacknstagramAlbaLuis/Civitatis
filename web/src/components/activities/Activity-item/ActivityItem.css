@@ -12,6 +12,7 @@
 }
 p.card-text {
   text-align: left;
+  padding: 20px 30px 0px 30px;
 }
 p.card-text a {
   text-decoration: none;
@@ -27,4 +28,14 @@ p.card-text a {
 }
 .card-body {
   min-height: 100px;
+  padding: 0px;
+}
+.cardprice {
+  text-align: right;
+  background: #f70759;
+  font-size: 20px;
+  font-weight: 600;
+  float: right;
+  color: white;
+  padding: 0px 30px;
 }

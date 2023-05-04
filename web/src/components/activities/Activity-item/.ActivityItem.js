@@ -9,7 +9,7 @@ function ActivityItem({ activity: {id , nameactivity, pics, price}  }) {
       <Link to={`/activities/${id}`}><img src={pics} className="card-img-top" alt={nameactivity} /></Link>
       <div className="card-body">
         <p className="card-text"><Link to={`/activities/${id}`}>{nameactivity}</Link></p>
-        <p>{price}</p>
+        <p className="cardprice">{price}€</p>
       </div>
     </div>
 

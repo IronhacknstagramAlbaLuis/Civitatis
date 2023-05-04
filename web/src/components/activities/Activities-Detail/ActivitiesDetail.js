@@ -41,7 +41,7 @@ function ActivitiesDetail() {
             <span className='gris'><img src={hotelimg} className='activityicon' alt="Recogida"/>Recogida en el hotel</span></p>
           </div>
           <div className="col-6 col-md-4 alignri">
-            <p className='precio'>{activity.price}xx€</p>
+            <p className='precio'>{activity.price}€</p>
             <Link to="https://www.paypal.com/es/webapps/mpp/home" className='boton' target='_blank'>Comprar</Link>
           </div>
           <div className='col-6 col-md-4 rosa descripciondestacada'>

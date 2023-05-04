@@ -15,7 +15,8 @@ function Home () {
 			    <h3>Llena tu viaje</h3>
          	<h1>Excursiones en español por todo el mundo</h1>
            <form className="d-flex" role="search">
-             <Destiny/>
+              <input className="form-control me-2 searchform" type="search" placeholder="Where are you traveling to?" aria-label="Search"/>
+              <button className="btn btn-outline-success enter" type="submit"><img src={searchicon} className='searchicon' alt="Go!"/></button>
            </form>
 		    </div>
 
@@ -38,7 +39,7 @@ function Home () {
 
 		    </div>
       </section>
-      <section className="principalsdestinies">
+      <section className="principalsdestinies container">
         <h2>Principales destinos</h2>
         <div className="destinos">
        
@@ -66,7 +67,7 @@ function Home () {
         </div>
       </section>
 
-      <section className="principalsativities">
+      <section className="principalsativities container">
         <h2>Actividades destacadas</h2>
         <ActivitiesList/>
       </section>

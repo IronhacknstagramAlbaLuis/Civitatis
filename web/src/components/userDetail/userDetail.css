@@ -1,0 +1,15 @@
+.micuenta p {
+  text-align: left;
+  color: white;
+}
+.micuenta {
+  background: #f70759;
+  padding: 4%;
+}
+.misbotones{
+  text-align: center;
+  margin-top: 3%;
+}
+.misbotones .boton {
+  margin: 15px;
+}

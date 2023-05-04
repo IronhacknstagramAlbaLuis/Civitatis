@@ -9,12 +9,12 @@ import './formLogin.css';
 
 function LoginForm() {
   const { register, handleSubmit, setError, formState: { errors } } = useForm({ mode: 'onBlur'});
-  const {serverError, setServerError } = useState()
+  const [serverError, setServerError ]= useState()
   const { onUserChange } = useContext(AuthContext)
   const navigate = useNavigate( )
 
   const onLoginSubmit = (user) => {
-    //setServerError()
+    setServerError(serverError)
     loginService.login(user)
     .then((user) => {
       onUserChange(user)

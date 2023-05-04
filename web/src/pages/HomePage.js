@@ -3,6 +3,7 @@ import PageLayout from '../components/layout/PageLayout';
 import searchicon from'../assets/img/searchicon.png';
 import Destiny from '../components/destinyTop/Destiny'
 import ActivitiesList from '../components/activities/activities-list/ActivitiesList';
+import { Link } from 'react-router-dom';
 
 import './homePage.css';
 
@@ -44,7 +45,7 @@ function Home () {
         <div className="destinos">
        
         <div className="destino roma">
-              <p>Roma</p>
+              <Link to = {`/activities?destiny=Roma`}><p>Roma</p></Link>
           </div>
           <div className="destino bali">
               <p>Bali</p>

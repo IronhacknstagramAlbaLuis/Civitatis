@@ -9,6 +9,7 @@ import LoginPage from './pages/LoginPage';
 import  AuthStore  from './components/context/AuthStore'
 import DetailPage from './pages/DetailPage';
 import UserPage from './pages/UserPage';
+import Pagefilter from './pages/Pagefilter';
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" element={<LoginPage/>} />
           <Route path="/activities/:id" element={<DetailPage/>} />
           <Route path="/users/:userId" element={<UserPage/>} />
+          <Route path="/activities/:id" element={<Pagefilter/>}/>
         </Routes> 
       
         <Footer />

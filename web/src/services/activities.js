@@ -1,5 +1,6 @@
 
 import http from './base-api'
+const detailQuery = (query) => http.get('/activities', { params: query })
 
  const list = () =>  http.get('/activities')
  .then((res) => res.data)
@@ -14,5 +15,6 @@ import http from './base-api'
 export default {
   list,
   detail,
+  detailQuery
 
 }

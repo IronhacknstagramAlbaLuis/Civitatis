@@ -1,18 +1,22 @@
 import React, {useState} from "react";
 import { useForm } from "react-hook-form";
 import userService from '../../services/user'
-
+import { useNavigate } from 'react-router-dom'
 import './formUser.css';
 
 function RegisterForm() {
   const { register, handleSubmit, setError, formState: { errors } } = useForm({mode: 'onBlur'});
+  const navigate = useNavigate( )
   const onSubmit = (user) => {
     userService.create(user)
-    .then(user => console.info(user))
+    .then(user => {console.info(user)
+      navigate("/login")
+    })
     .catch(error => error.response?.data?.errors || {});
     Object.keys(errors)
       .forEach((inputName)=> {setError(inputName, {message: errors[inputName]})})
   };
+  
 
   return (
     

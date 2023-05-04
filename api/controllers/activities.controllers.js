@@ -1,8 +1,12 @@
 const Activity = require("../models/activity.model");
 
 module.exports.list = (req, res, next) => {
-  Activity.find()
-    .populate("reviews")
+  const criterial = {}
+  if(req.query.destiny){
+    criterial.destiny = req.query.destiny
+  }
+ 
+  Activity.find(criterial)
     .then((activities) => res.json(activities))
     .catch(next);
 };

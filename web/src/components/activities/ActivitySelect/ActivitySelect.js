@@ -19,6 +19,7 @@ function ActivitySelect() {
   console.log(activities)
   return (
     <div>
+    holaaaaaaa
       {activities.map((activity)=>(
         <div key={activity.id}>
           <ActivityItem activity={activities}/>

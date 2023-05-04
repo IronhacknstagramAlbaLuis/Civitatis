@@ -45,7 +45,7 @@ function Home () {
         <div className="destinos">
        
         <div className="destino roma">
-              <Link to = {`/activities?destiny=Roma`}><p>Roma</p></Link>
+              <Link to = {`/activities/filter/destiny=Roma`}><p>Roma</p></Link>
           </div>
           <div className="destino bali">
               <p>Bali</p>

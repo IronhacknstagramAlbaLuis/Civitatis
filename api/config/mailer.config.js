@@ -92,25 +92,25 @@ module.exports.sendConfirmationEmail = (user) => {
         <table width="600px" align="center" border="0" cellspacing="0" cellpadding="0" style="display: block; background-color: #fff">
           <tbody>
             <tr>
-              <td bgcolor="#ffffff" align="center" valign="top" class="main-padding" style="padding: 0px; margin: 0;">
+              <td bgcolor="#ffffff" align="center" valign="top" className="main-padding" style="padding: 0px; margin: 0;">
       
                 <!-- MAIN-1 -->
                 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" style="display: block; background-color: #ffffff; margin: 0; padding: 0;">
                   <tbody>
                     <tr>
-                      <td bgcolor="#ffffff" align="center" valign="top" class="main-padding" style="padding: 0px; margin: 0;">
+                      <td bgcolor="#ffffff" align="center" valign="top" className="main-padding" style="padding: 0px; margin: 0;">
                         <!-- start IMAGE-1 -->
                         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" style="display: block; background-color: #ffffff; margin: 0; padding: 0;">
                           <tr>
-                            <td bgcolor="#ffffff" align="center" valign="top" class="main-padding" style="padding: 0px; margin: 0;">
-                              <table class="MainTable" width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%">
+                            <td bgcolor="#ffffff" align="center" valign="top" className="main-padding" style="padding: 0px; margin: 0;">
+                              <table className="MainTable" width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%">
                                 <tr>
-                                  <td class="padding-top-0" align="center" valign="top" style="padding: 0px; margin: 0;">
+                                  <td className="padding-top-0" align="center" valign="top" style="padding: 0px; margin: 0;">
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                       <tr>
                                         <td align="center" valign="top">
                                           <a href="${process.env.API_URL}/users/${user.id}/confirm" target="_blank">
-                                            <img class="width-100" src="img/civitatis_cabecera.jpg" alt="Si no ve las imagenes de este correo, haga clic en HABILITAR para cargarlas"
+                                            <img className="width-100" src="img/civitatis_cabecera.jpg" alt="Si no ve las imagenes de este correo, haga clic en HABILITAR para cargarlas"
                                             width="100%" style="display: block;" border="0" />
                                           </a>
                                         </td>
@@ -127,8 +127,8 @@ module.exports.sendConfirmationEmail = (user) => {
                         <!-- start TEXT-1 -->
                         <table align="center" width="600px" border="0" cellspacing="0" cellpadding="0" style="display: block; background-color: #ffffff; margin: 0; padding: 0;">
                           <tr>
-                            <td bgcolor="#ffffff" align="center" valign="top" class="main-padding" style="padding: 0; margin: 0;">
-                              <table class="MainTable" width="600" border="0" cellspacing="0" cellpadding="0" style="width:600px">
+                            <td bgcolor="#ffffff" align="center" valign="top" className="main-padding" style="padding: 0; margin: 0;">
+                              <table className="MainTable" width="600" border="0" cellspacing="0" cellpadding="0" style="width:600px">
                                 <tr>
                                   <td align="center" valign="top" style="padding:0px; margin: 0; padding-top: 10px; padding-bottom: 20px;">
                                     <table width="600px" border="0" cellspacing="0" cellpadding="0">
@@ -157,10 +157,10 @@ module.exports.sendConfirmationEmail = (user) => {
                         <!-- start IMAGE-2 -->
                         <table width="600px" align="center" border="0" cellspacing="0" cellpadding="0" style="margin: 0; padding: 0; margin-bottom: 70px;">
                           <tr>
-                            <td bgcolor="#ffffff" align="center" valign="top" class="main-padding" style="padding: 0px;">
-                              <table class="MainTable" width="600" border="0" cellspacing="0" cellpadding="0" style="width:600px">
+                            <td bgcolor="#ffffff" align="center" valign="top" className="main-padding" style="padding: 0px;">
+                              <table className="MainTable" width="600" border="0" cellspacing="0" cellpadding="0" style="width:600px">
                                 <tr>
-                                  <td class="padding-top-0" align="center" valign="top" style="padding-bottom: 0px;">
+                                  <td className="padding-top-0" align="center" valign="top" style="padding-bottom: 0px;">
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                       <tr>
                                         <td align="center" valign="top">
@@ -181,10 +181,10 @@ module.exports.sendConfirmationEmail = (user) => {
                         <!-- start IMAGE-3 -->
                         <table width="600px" align="center" border="0" cellspacing="0" cellpadding="0" style="margin: 0; padding: 0">
                           <tr>
-                            <td bgcolor="#f70759" align="center" valign="top" class="main-padding" style="padding: 20px 0px;">
-                              <table class="MainTable" width="600" border="0" cellspacing="0" cellpadding="0" style="width:600px">
+                            <td bgcolor="#f70759" align="center" valign="top" className="main-padding" style="padding: 20px 0px;">
+                              <table className="MainTable" width="600" border="0" cellspacing="0" cellpadding="0" style="width:600px">
                                 <tr>
-                                  <td class="padding-top-0" align="center" valign="top" style="padding-bottom: 0px;">
+                                  <td className="padding-top-0" align="center" valign="top" style="padding-bottom: 0px;">
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                       <tr>
                                         <td align="center" valign="top">
@@ -210,7 +210,7 @@ module.exports.sendConfirmationEmail = (user) => {
           </tbody>
         </table>
       
-        <div class="gmailfix" style="white-space:nowrap; font:15px courier; line-height:0; color:#ffffff; background-color:#ffffff;">
+        <div className="gmailfix" style="white-space:nowrap; font:15px courier; line-height:0; color:#ffffff; background-color:#ffffff;">
           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         </div>

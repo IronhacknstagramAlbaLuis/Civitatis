@@ -51,7 +51,7 @@ function ActivitiesDetail() {
           <div id="carouselExample" className="carousel slide col-12 col-sm-6 col-md-8">
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img src={roma} className='carrou' alt="imagen1"/>
+                <img src={activity.pics} className='carrou' alt="imagen1"/>
               </div>
               <div className="carousel-item">
                 <img src={roma} className='carrou' alt="imagen2"/>
@@ -76,27 +76,27 @@ function ActivitiesDetail() {
           </div>
           <div className="detalles">
             <h4>Detalles</h4>
-            <div class="row">
-              <div class="col-6 col-md-1 backclaro rosa">
+            <div className="row">
+              <div className="col-6 col-md-1 backclaro rosa">
                 <p>Duración</p>
               </div>
-              <div class="col-md-9 backclaro">
+              <div className="col-md-9 backclaro">
                 <p>50min</p>
               </div>
             </div>
-            <div class="row">
-              <div class="col-6 col-md-1 backclaro rosa">
+            <div className="row">
+              <div className="col-6 col-md-1 backclaro rosa">
                 <p>Idioma</p>
               </div>
-              <div class="col-md-9 backclaro">
+              <div className="col-md-9 backclaro">
                 <p>La actividad se realiza con un guía español o inglés en función de la modalidad.</p>
               </div>
             </div>
-            <div class="row">
-              <div class="col-6 col-md-1 backclaro rosa">
+            <div className="row">
+              <div className="col-6 col-md-1 backclaro rosa">
                 <p>Incluido</p>
               </div>
-              <div class="col-md-9 backclaro">
+              <div className="col-md-9 backclaro">
                 <ul>
                   <li>Recogida y traslado de regreso al hotel.</li>
                   <li>Guía local de habla española o inglesa, conocedor de la cultura balinesa y de la zona.</li>
@@ -104,11 +104,11 @@ function ActivitiesDetail() {
                 </ul>
               </div>
             </div>
-            <div class="row">
-              <div class="col-6 col-md-1 backclaro rosa">
+            <div className="row">
+              <div className="col-6 col-md-1 backclaro rosa">
                 <p>No incluido</p>
               </div>
-              <div class="col-md-9 backclaro">
+              <div className="col-md-9 backclaro">
                 <p>Comida y entradas.</p>
               </div>
             </div>

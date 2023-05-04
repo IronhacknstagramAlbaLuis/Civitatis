@@ -25,7 +25,7 @@ function App() {
           <Route path="/login" element={<LoginPage/>} />
           <Route path="/activities/:id" element={<DetailPage/>} />
           <Route path="/users/:userId" element={<UserPage/>} />
-          {/* <Route path="/activities/:?destiny" element={<Pagefilter/>}/> */}
+          <Route path="/activities/filter" element={<Pagefilter/>}/>
           
         </Routes> 
       

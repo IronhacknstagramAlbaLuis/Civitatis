@@ -13,7 +13,7 @@ function RegisterPage() {
           <div clasName="col-12">
             <div className="col-12">
               
-            <div class="text-center">
+            <div className="text-center">
               <h2>¡Bienvenido a bordo!</h2>
               <p>Al registrarte tendrás acceso a todas las reseñas y mucha más información<br/>
               <b>¡No te pierdas nada!</b></p>

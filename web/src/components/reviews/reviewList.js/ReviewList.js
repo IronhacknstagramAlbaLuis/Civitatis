@@ -1,20 +1,14 @@
 import { useState, useEffect } from "react"
-import { useParams } from  'react-router-dom';
+
 import activitiesService from "../../../services/activities";
 import activities from "../../../services/activities";
 
-function ReviewsList() {
-
-  const { id } = useParams()
-  const [reviews, setReviews] = useState ([]);
-
-  const reload = () => {
-    activitiesService.detail(id)
-      .then((activity) => setReviews(activity.reviews))
-  }
+function ReviewsList({ reviews, handleReview, id }) {
+ 
+ 
 
   useEffect(()=> {
-    reload()
+    handleReview(id)
   }, [])
 
   return (

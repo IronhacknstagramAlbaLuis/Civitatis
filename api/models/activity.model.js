@@ -51,7 +51,6 @@ activitySchema .virtual("reviews", {
   ref: "Review",
   localField: "_id",
   foreignField: "activity", 
-  justOne: false,
 });
 activitySchema .virtual("like", {
   ref: "Like",

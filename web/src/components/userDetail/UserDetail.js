@@ -30,7 +30,7 @@ function UserDetail() {
             <p><b>Nombre:</b> {user.name}</p>
             <p><b>Apellidos:</b> {user.lastname}</p>
             <p><b>Email:</b> {user.email}</p>
-            <p><b>Contraseña:</b> {user.password}</p>
+           
           </div>
           <div className='misbotones'>
             <Link to='/' className="boton">Editar</Link>

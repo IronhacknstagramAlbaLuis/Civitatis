@@ -7,6 +7,7 @@ module.exports.list = (req, res, next) => {
   }
  
   Activity.find(criterial)
+    .populate("reviews")
     .then((activities) => res.json(activities))
     .catch(next);
 };

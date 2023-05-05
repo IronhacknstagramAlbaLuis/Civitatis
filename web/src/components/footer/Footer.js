@@ -40,12 +40,12 @@ function Footer() {
             <b>Siguenos</b>
             <Link to="https://www.facebook.com/civitatis" target="_blank">Facebook</Link>
             <Link to="https://www.instagram.com/civitatis/?hl=es" target="_blank">Instagram</Link>
-            <Link to="https://twitter.com/civitatis?lang=es">Twitter</Link>
+            <Link to="https://twitter.com/civitatis?lang=es" target="_blank">Twitter</Link>
           </div>
           <div>
             <b>Políticas</b>
-            <Link to="#">Privacidad</Link>
-            <Link to="#">Aviso Legal</Link>
+            <Link to="/politica-de-privacidad">Privacidad</Link>
+            <Link to="/aviso-legal">Aviso Legal</Link>
           </div>
           <div>
           <p>©2023 Todos los derechos Reservados Luis y Alba</p>

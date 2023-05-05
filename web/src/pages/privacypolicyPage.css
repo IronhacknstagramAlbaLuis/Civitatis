@@ -1,0 +1,35 @@
+.politicas h3 {
+  color: #f70759;
+  font-size: 30px;
+  font-weight: 600;
+}
+.politicas h4 {
+  color: #f70759;
+  margin: 40px 0px;
+}
+.politicas p {
+  text-align: justify;
+  color: #6c757d;
+}
+.textanime {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #f70759; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #f70759 }
+}

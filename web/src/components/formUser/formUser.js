@@ -25,20 +25,20 @@ function RegisterForm() {
           <input
             type="text"
             id="name"
-            placeholder="Name"
+            placeholder="Nombre"
             {...register("name", { required: true, minLength: 3 })}
           />
-          {errors.name && <span>This field is required and needs at least 3 chars</span>}
+          {errors.name && <span className="error">Este campo es obligatorio, debe tener al menos 3 caracteres</span>}
         </div>
 
         <div>
           <input
             type="text"
             id="lastname"
-            placeholder="Last Name"
+            placeholder="Apellidos"
             {...register("lastname", { required: true, minLength: 3 })}
           />
-          {errors.name && <span>This field is required and needs at least 3 chars</span>}
+          {errors.name && <span className="error">Este campo es obligatorio, debe tener al menos 3 caracteres</span>}
         </div>
 
         <div>
@@ -48,31 +48,31 @@ function RegisterForm() {
             placeholder="Email"
             {...register("email", { required: true, pattern: /^\S+@\S+\.\S+$/ })}
           />
-          {errors.email &&<span>This field is required and must be a valid email address</span>}
+          {errors.email &&<span className="error">Este campo es obligatorio, debe ser una dirección válida</span>}
         </div>
 
         <div>
           <input
             type="text"
             id="username"
-            placeholder="User"
+            placeholder="Usuario"
             {...register("username", {
               required: true,
               minLength: 3,
               pattern: /^[a-z0-9]+$/,
             })}
           />
-          {errors.username && <span>This field is required, needs at least 3 chars, must be lowercase and without spaces</span>}
+          {errors.username && <span className="error">Este campo es obligatorio, debe tener al menos 3 caracteres, en minúsculas y sin espacios</span>}
         </div>
 
         <div>
           <input
             type="password"
             id="password"
-            placeholder="Password"
+            placeholder="Contraseña"
             {...register("password", { required: true, minLength: 8 })}
           />
-          {errors.password && <span>This field is required and needs at least 8 chars</span>}
+          {errors.password && <span className="error">Este campo es obligatorio, debe tener al menos 8 caracteres</span>}
         </div>
 
         <div>
@@ -82,10 +82,10 @@ function RegisterForm() {
             id="confirm"
             {...register("confirm")}
           />
-          <label htmlFor="confirm">Confirm:</label>
+          <label htmlFor="confirm" className="confirm">Acepto política de privacidad y condiciones generales</label>
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Guardar</button>
       </form>
   );
 }

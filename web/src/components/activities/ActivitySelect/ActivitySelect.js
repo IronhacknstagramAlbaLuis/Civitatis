@@ -2,6 +2,7 @@ import React,{ useState, useEffect } from 'react'
 import activityQuery from '../../../services/activities'
 import { useSearchParams} from 'react-router-dom'
 import ActivityItem from '../Activity-item/.ActivityItem';
+import './activitySelect.css';
 
 
 
@@ -23,13 +24,14 @@ function ActivitySelect() {
 
   return (
 
-    <div>
-        holaaaaa
-      {activities.map((activity)=>(
-        <div key={activity.id}>
-          <ActivityItem activity={activity}/>
-        </div>
-      ))}
+    <div className='container'>
+      <div className='row g-2 rowbox'>
+        {activities.map((activity)=>(
+          <div key={activity.id} className="principalbox">
+                <ActivityItem activity={activity}/>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

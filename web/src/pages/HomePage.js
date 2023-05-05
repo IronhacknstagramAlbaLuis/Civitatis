@@ -45,25 +45,25 @@ function Home () {
         <div className="destinos">
        
         <div className="destino roma">
-              <Link to = {`/activities/filter/destiny=Roma`}><p>Roma</p></Link>
+              <Link to = {`/activities/filter?destiny=Roma`}><p>Roma</p></Link>
           </div>
           <div className="destino bali">
-              <p>Bali</p>
+              <Link to = {`/activities/filter?destiny=Bali`}><p>Bali</p></Link>
           </div>
           <div className="destino ny">
-              <p>Nueva York</p>
+            <Link to = {`/activities/filter?destiny=NuevaYork`}><p>Nueva York</p></Link>
           </div>
         </div>
         <div className="destinos">
           
           <div className="destino elcairo">
-              <p>El Cairo</p>
+            <Link to = {`/activities/filter?destiny=Egipto`}><p>Egipto</p></Link>
           </div>
           <div className="destino paris">
-              <p>París</p>
+            <Link to = {`/activities/filter?destiny=Paris`}><p>París</p></Link>
           </div>
           <div className="destino londres">
-              <p>Londres</p>
+            <Link to = {`/activities/filter?destiny=Londres`}><p>Londres</p></Link>
           </div>
         </div>
       </section>

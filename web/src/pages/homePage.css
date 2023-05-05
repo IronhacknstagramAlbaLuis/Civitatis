@@ -118,6 +118,9 @@ section.principalsdestinies {
   background-position: center;
   background-size: cover;
 }
+.destino:hover {
+  transform: translateY(-16px);  
+}
 .ny{
   background-image: url(./../../public/assets/img/civitatis_ny.jpg);
   background-position: center;
@@ -142,4 +145,10 @@ section.principalsdestinies {
   background-image: url(./../../public/assets/img/civitatis_londres.jpg);
   background-position: center;
   background-size: cover;
+}
+.destino a {
+  text-decoration: none;
+}
+section.principalsativities.container h2 {
+  text-align: center;
 }

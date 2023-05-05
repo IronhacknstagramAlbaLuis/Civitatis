@@ -13,7 +13,7 @@ function RegisterPage() {
           <div clasName="col-12">
             <div className="col-12">
               
-            <div className="text-center">
+            <div className="text-center inicio">
               <h2>¡Bienvenido a bordo!</h2>
               <p>Al registrarte tendrás acceso a todas las reseñas y mucha más información<br/>
               <b>¡No te pierdas nada!</b></p>
@@ -24,7 +24,7 @@ function RegisterPage() {
           </div>
 
           
-          <p className='m-0 text-muted registrado'>Already registered? just <Link to="/login">Login!</Link></p>
+          <p className='m-0 text-muted registrado'>Ya estás registrado? Entonces <Link to="/login">Inicia sesión!</Link></p>
         </div>
       </div>
     </PageLayout>

@@ -5,7 +5,9 @@ import ActivitySelect from '../components/activities/ActivitySelect/ActivitySele
 function Pagefilter() {
   return (
    <PageLayout>
-    <ActivitySelect/>
+    <div className="margin-botom">
+      <ActivitySelect/>
+    </div>
    </PageLayout>
   )
 }

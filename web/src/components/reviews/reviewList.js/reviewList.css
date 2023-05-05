@@ -1,0 +1,18 @@
+.resenabox {
+  width: 100%;
+  background: white;
+  padding: 2%;
+  border-radius: 20px;
+}
+.resenabox b {
+  text-align: right;
+  display: block;
+  color: #F70759;
+}
+.resenabox p {
+  text-align: left;
+  color: #8c8a8a;
+}
+.resenabox img {
+  margin-right: 20px;
+}

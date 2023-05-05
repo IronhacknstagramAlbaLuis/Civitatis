@@ -21,3 +21,9 @@ input#confirm {
   border: #f70759;
   margin-right: 17px;
 }
+label.confirm {
+  color: #6c757d;
+}
+.error {
+  font-size: 10px;
+}

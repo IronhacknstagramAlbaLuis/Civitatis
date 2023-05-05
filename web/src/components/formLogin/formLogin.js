@@ -45,25 +45,25 @@ function LoginForm() {
             <div>
               <input
                 type="text"
-                placeholder='User Name'
+                placeholder='Nombre de usuario'
                 id="username"
                 {...register("username", {
                   required: true,
                 })}
                 />
-            {errors.username && <span>This field is required, needs at least 3 chars, must be lowercase and without spaces</span>}
+            {errors.username && <span className="error">Este campo es obligatorio, debe tener al menos 3 caracteres, debe estar en minúscula</span>}
             </div>
             <div>
               <input
                 type="password"
-                placeholder='Password'
+                placeholder='Contraseña'
                 id="password"
                 {...register("password", { required: true, minLength: 8 })}
               />
-              {errors.password && <span>This password is invalid</span>}
+              {errors.password && <span className="error">La contraseña no es válida</span>}
             </div>
         
-            <button type="submit">Login</button>
+            <button type="submit">Entrar</button>
           </form>
         </div>
       </div>

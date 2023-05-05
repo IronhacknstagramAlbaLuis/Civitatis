@@ -23,9 +23,13 @@ function DetailPage() {
     <PageLayout>
       <div className='container'>
         <ActivitiesDetail/>
+        <hr></hr>
+        <div className="resenas">
+          <h4>Reseñas</h4>
+          <p  className='resenastext'>Opiniones de clientes reales que han reservado con nosotros.</p>
+        </div>
         <ReviewsList reviews={reviews} handleReview={handleReview} id={id}/>
         <ReviewItem handleReview={handleReview} id={id}/>
-        
       </div>
     </PageLayout>
   )

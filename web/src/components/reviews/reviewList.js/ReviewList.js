@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 
 import activitiesService from "../../../services/activities";
 import activities from "../../../services/activities";
+import usericonpink from'../../../assets/img/usericon-pink.png'
+import './reviewList.css';
 
 function ReviewsList({ reviews, handleReview, id }) {
  
@@ -15,9 +17,10 @@ function ReviewsList({ reviews, handleReview, id }) {
     <>
       <div className="row  g-2">
         {reviews.map((reviews)=>(
-          <div className="d-flex align-items-stretch" key={reviews.id}>
-            {reviews.review}
-            {reviews.author.username}
+          <div className="resenabox" key={reviews.id}>
+            
+            <p><img src={usericonpink} className='usericon pink' alt="user"/>{reviews.review}</p>
+            <b>{reviews.author.username}</b>
           </div>
         ))}
       </div>

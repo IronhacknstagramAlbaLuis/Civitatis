@@ -6,7 +6,7 @@
   max-width: 1200px;
 }
 img.logo {
-  width: 101px;
+  width: 120px;
 }
 .search{
   border-radius: 19px;
@@ -24,7 +24,7 @@ img.searchicon {
     right: 68px;
 }
 img.usericon {
-  width: 22px;
+  width: 30px;
 }
 .nav-link::after {
   display: none !important;

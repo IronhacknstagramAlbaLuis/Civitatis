@@ -13,3 +13,18 @@
 .misbotones .boton {
   margin: 15px;
 }
+.pop{
+  display:inline-block;
+  margin:0.4em;  padding:1em;
+  cursor:pointer;
+  background:#e1e1e1;  color:#666;
+}
+
+.pop:hover{
+  animation: pop 0.3s linear 1;
+}
+
+@keyframes pop{
+  50%  {transform: scale(1.1);}
+}
+

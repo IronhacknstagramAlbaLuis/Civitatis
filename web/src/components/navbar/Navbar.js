@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
-import { NavLink, Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from'../../assets/img/logo_civitatis.png'
-import searchicon from'../../assets/img/searchicon.png'
 import usericon from'../../assets/img/usericon.png'
 import { AuthContext } from '../context/AuthStore'
 import './navBar.css';
@@ -27,12 +26,12 @@ function Navbar() {
               {(user?.email) ? (
                 <ul className="dropdown-menu">
                   <li><Link to = {`/users/${user.id}`} className="dropdown-item">{user.email}</Link></li>
-                  <li><button className="dropdown-item" onClick={() => logout()} >Logout</button></li>
+                  <li><button className="dropdown-item" onClick={() => logout()} >Cerrar sesiónb</button></li>
                 </ul>
               ) : (
                 <ul className="dropdown-menu">
-                  <li><Link to="/register" className="dropdown-item">Register</Link></li>
-                  <li><Link to="/login" className="dropdown-item">Login</Link></li>
+                  <li><Link to="/register" className="dropdown-item">Regístrate</Link></li>
+                  <li><Link to="/login" className="dropdown-item">Mi cuenta</Link></li>
                 </ul>
               )}
             </li>

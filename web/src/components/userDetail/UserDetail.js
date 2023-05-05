@@ -33,8 +33,8 @@ function UserDetail() {
            
           </div>
           <div className='misbotones'>
-            <Link to='/' className="boton">Editar</Link>
-            <Link to='/' className="boton">Cerrar sesión</Link>
+            <Link to='/' className="boton pop">Editar</Link>
+            <Link to='/' className="boton pop" id="pop">Cerrar sesión</Link>
           </div>
         </div>
        )}

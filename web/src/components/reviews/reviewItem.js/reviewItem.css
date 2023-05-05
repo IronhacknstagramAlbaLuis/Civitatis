@@ -1,0 +1,24 @@
+textarea#review {
+  width: 100%;
+  border: 1px solid #f70758;
+  border-radius: 20px;
+  min-height: 120px;
+}
+.row.formrow {
+  margin-top: 10%;
+}
+.row.formrow h5 {
+  font-size: 60px;
+  color: #f70758;
+  font-weight: 700;
+  line-height: 55px;
+}
+.row.formrow p {
+  text-align: left;
+  color: #f70758;
+  padding: 15px 50px;
+}
+textarea#review {
+  color: #8c8a8a;
+  padding: 3%;
+}

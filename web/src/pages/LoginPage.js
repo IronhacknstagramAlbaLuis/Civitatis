@@ -12,8 +12,8 @@ function LoginPage() {
       <div className="row justify-content-center">
         <div className="col-12 col-md-8 mt-5">
           <div className="max-auto mb-3 text-center">
-            <div>
-              <h2>Login</h2>
+            <div class="inicio">
+              <h2>Inicia sesión</h2>
               <p>Hemos añadido nuevos destinos y actividades<br/>
               <b>¡Nos encanta verte de vuelta!</b></p>
             </div>

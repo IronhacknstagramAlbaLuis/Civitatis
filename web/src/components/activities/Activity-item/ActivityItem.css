@@ -5,8 +5,11 @@
   -webkit-box-shadow: 0px 7px 11px 0px rgba(179,179,179,1);
   -moz-box-shadow: 0px 7px 11px 0px rgba(179,179,179,1);
   box-shadow: 0px 7px 11px 0px rgba(179,179,179,1);
-  
 }
+.cardboxc:hover {
+  transform: translateY(-16px); 
+}
+
 .card-img, .card-img-top {
   border-radius: 0px;
 }

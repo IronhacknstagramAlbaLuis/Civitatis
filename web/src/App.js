@@ -10,6 +10,8 @@ import  AuthStore  from './components/context/AuthStore'
 import DetailPage from './pages/DetailPage';
 import UserPage from './pages/UserPage';
 import Pagefilter from './pages/Pagefilter';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import AvisoLegalPage from './pages/AvisoLegalPage';
 
 
 
@@ -26,7 +28,8 @@ function App() {
           <Route path="/activities/:id" element={<DetailPage/>} />
           <Route path="/users/:userId" element={<UserPage/>} />
           <Route path="/activities/filter" element={<Pagefilter/>}/>
-          
+          <Route path="/politica-de-privacidad" element={<PrivacyPolicyPage/>}/>
+          <Route path="/aviso-legal" element={<AvisoLegalPage/>}/>
         </Routes> 
       
         <Footer />

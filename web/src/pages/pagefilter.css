@@ -1,0 +1,13 @@
+.row.menudestinos .col {
+  border: 1px solid #d82260;
+}
+.row.menudestinos {
+  background: white;
+}
+.row.menudestinos a {
+  text-decoration: none;
+}
+p.menudestinosp {
+  margin: 6px;
+  color: #f70759;
+}

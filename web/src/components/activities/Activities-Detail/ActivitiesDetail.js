@@ -48,7 +48,7 @@ function ActivitiesDetail() {
             <h4>Descripción</h4>
             <p  className='descipciontextdes'>{activity.description}</p>
           </div>
-          <div id="carouselExample" className="carousel slide col-12 col-sm-6 col-md-8">
+          <div id="carouselE" className="carousel slide col-12 col-sm-6 col-md-8">
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img src={activity.pics} className='carrou' alt="imagen1"/>
@@ -57,11 +57,11 @@ function ActivitiesDetail() {
                 <img src={activity.pics} className='carrou' alt="imagen2"/>
               </div>
             </div>
-            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <button className="carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
               <span className="carousel-control-prev-icon" aria-hidden="true"></span>
               <span className="visually-hidden">Previous</span>
             </button>
-            <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <button className="carousel-control-next" type="button" data-bs-target="#carouselE" data-bs-slide="next">
               <span className="carousel-control-next-icon" aria-hidden="true"></span>
               <span className="visually-hidden">Next</span>
             </button>

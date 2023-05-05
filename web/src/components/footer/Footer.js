@@ -16,13 +16,6 @@ function Footer() {
       bubble.style.setProperty('--time', `${2+Math.random()*2}s`);
       bubble.style.setProperty('--delay', `${-1*(2+Math.random()*2)}s`);
       bubbles.appendChild(bubble);
-
-      setTimeout(() => {
-        bubble.style.opacity = 0;
-        setTimeout(() => {
-          bubbles.removeChild(bubble);
-        }, 2000);
-      }, Math.random()*15000);
     }
   }, []);
 

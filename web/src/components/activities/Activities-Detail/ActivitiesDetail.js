@@ -54,10 +54,7 @@ function ActivitiesDetail() {
                 <img src={activity.pics} className='carrou' alt="imagen1"/>
               </div>
               <div className="carousel-item">
-                <img src={roma} className='carrou' alt="imagen2"/>
-              </div>
-              <div className="carousel-item">
-                <img src={roma} className='carrou' alt="imagen3"/>
+                <img src={activity.pics} className='carrou' alt="imagen2"/>
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -78,10 +75,10 @@ function ActivitiesDetail() {
             <h4>Detalles</h4>
             <div className="row">
               <div className="col-6 col-md-1 backclaro rosa">
-                <p>Duración</p>
+                <p>Tiempo</p>
               </div>
               <div className="col-md-9 backclaro">
-                <p>50min</p>
+                <p>{activity.details}</p>
               </div>
             </div>
             <div className="row">
@@ -89,7 +86,7 @@ function ActivitiesDetail() {
                 <p>Idioma</p>
               </div>
               <div className="col-md-9 backclaro">
-                <p>La actividad se realiza con un guía español o inglés en función de la modalidad.</p>
+                <p>La actividad se realiza con un guía español o inglés en función de la modalidad</p>
               </div>
             </div>
             <div className="row">
@@ -109,7 +106,7 @@ function ActivitiesDetail() {
                 <p>No incluido</p>
               </div>
               <div className="col-md-9 backclaro">
-                <p>Comida y entradas.</p>
+                <p>Comida</p>
               </div>
             </div>
             <div className="cancelación">

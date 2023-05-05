@@ -26,7 +26,7 @@ function Navbar() {
               {(user?.email) ? (
                 <ul className="dropdown-menu">
                   <li><Link to = {`/users/${user.id}`} className="dropdown-item">{user.email}</Link></li>
-                  <li><button className="dropdown-item" onClick={() => logout()} >Cerrar sesiónb</button></li>
+                  <li><button className="dropdown-item" onClick={() => logout()} >Cerrar sesión</button></li>
                 </ul>
               ) : (
                 <ul className="dropdown-menu">

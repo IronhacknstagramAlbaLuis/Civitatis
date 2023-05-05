@@ -19,8 +19,8 @@ function ReviewsList({ reviews, handleReview, id }) {
         {reviews.map((reviews)=>(
           <div className="resenabox" key={reviews.id}>
             
-            <p><img src={usericonpink} className='usericon pink' alt="user"/>{reviews.review}</p>
-            <b>{reviews.author.username}</b>
+            <p><img src={usericonpink} className='usericon pink' alt="user"/><b>{reviews.author.username}</b></p>
+            {reviews.review}
           </div>
         ))}
       </div>

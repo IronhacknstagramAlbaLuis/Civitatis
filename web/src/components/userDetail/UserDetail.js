@@ -24,7 +24,7 @@ function UserDetail() {
     <>
        { !user ? (<p>Loading user acount...</p>) :(
         <div className='container'>
-          <h1>Mi cuenta</h1>
+          <h1 className="textanime">Mi cuenta</h1>
           <div className='micuenta'>
             <p><b>Usuario:</b> {user.username}</p>
             <p><b>Nombre:</b> {user.name}</p>

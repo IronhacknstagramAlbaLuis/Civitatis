@@ -20,6 +20,8 @@
   animation: 
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 25px;
 }
 
 /* The typing effect */

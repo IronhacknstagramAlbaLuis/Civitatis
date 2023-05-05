@@ -27,7 +27,9 @@ function Pagefilter() {
         <Link to = {`/activities/filter?destiny=Londres`}><p className='menudestinosp'>Londres</p></Link>
       </div>
     </div>
-    <div className="margin-botom">
+    <div className="container">
+      <h2 className='titulolista'>Actividades destacadas</h2>
+      <p>Atención multicanal 24/7 antes, durante y después del viaje.</p>
       <ActivitySelect/>
     </div>
    </PageLayout>
